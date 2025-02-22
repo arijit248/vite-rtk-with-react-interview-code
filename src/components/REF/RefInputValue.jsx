@@ -1,22 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 
 function RefInputValue() {
-  const [inputValue, setInputValue] = useState("");
-  const previousInputValue = useRef("");
-
-  useEffect(() => {
-    previousInputValue.current = inputValue;
-  }, [inputValue]);
-
+  const inputValue = useRef("");
+  const handleCheckValue = () => {
+    console.log(inputValue.current.value, "inputValue.current.value");
+  };
   return (
     <>
-      <input
-        type="text"
-        value={inputValue}
-        onChange={(e) => setInputValue(e.target.value)}
-      />
-      <h2>Current Value: {inputValue}</h2>
-      <h2>Previous Value: {previousInputValue.current}</h2>
+      <h2>inputValue Value: {inputValue.current.value}</h2>
+      <input type="text" ref={inputValue} onChange={handleCheckValue} />
     </>
   );
 }
