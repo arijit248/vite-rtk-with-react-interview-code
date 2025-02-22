@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useRef } from "react";
 
 function RefInputValue() {
   const inputValue = useRef("");
