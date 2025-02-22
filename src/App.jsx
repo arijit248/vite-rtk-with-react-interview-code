@@ -6,17 +6,19 @@ import ContextAPIComponent1 from "./components/Context-API/contextAPIComponent1"
 import UseRefFocusInputField from "./components/REF/UseRefFocusInputField";
 import PreviousRefInputValue from "./components/REF/PreviousRefInputValue";
 import RefInputValue from "./components/REF/RefInputValue";
+import FileUpload from "./components/FileUpload/fileUpload";
 
 function App() {
   return (
     <>
-      <Count />
+      {/* <Count />
       <Component1 />
       <Parent />
       <ContextAPIComponent1 />
       <PreviousRefInputValue />
       <UseRefFocusInputField />
-      <RefInputValue />
+      <RefInputValue /> */}
+      <FileUpload />
     </>
   );
 }
